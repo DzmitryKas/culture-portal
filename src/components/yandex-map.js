@@ -1,16 +1,21 @@
 import React from "react";
+import './css/modal-video.min.css';
 
 function YandexMap(props) {
   const StyleWrapperMap = {
     display: "block",
-    margin: "100px auto",
+    margin: "0 auto",
     maxWidth: "800px",
+    width: "100%",
     height: "550px",
   }
   console.log('props', props.mapCode)
   return (
-    <div style={StyleWrapperMap} dangerouslySetInnerHTML={{__html: props.mapCode}}>     
-    </div>
+    <>
+      <p>Place of author's major activity</p>   
+      <div style={StyleWrapperMap} dangerouslySetInnerHTML={{__html: props.mapCode}}>      
+      </div>
+    </>
   )
 }
 
